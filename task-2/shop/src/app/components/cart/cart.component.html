@@ -1,0 +1,12 @@
+<h2>Cart</h2>
+<div *ngIf="orders[0]; else emptyCart">
+  <div>You have {{suma}} items in your cart</div>
+  <ul *ngFor="let order of orders">
+    <li>
+      {{order | json}} | 
+      {{order.quantity}} | 
+      <button (click)="deleteOrder(order)">Delete</button> 
+    </li>
+  </ul>
+</div>
+<ng-template #emptyCart>There are no items in your cart. Buy something.</ng-template>
