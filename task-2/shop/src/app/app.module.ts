@@ -6,6 +6,8 @@ import { ProductsComponent } from './components/products/products.component';
 import { OrderComponent } from './components/order/order.component';
 import { CartComponent } from './components/cart/cart.component';
 
+import { RainbowDirective } from './directives/rainbow.directive';
+
 @NgModule({
   imports: [
     BrowserModule
@@ -14,7 +16,8 @@ import { CartComponent } from './components/cart/cart.component';
     AppComponent,
     ProductsComponent,
     OrderComponent,
-    CartComponent
+    CartComponent,
+    RainbowDirective
   ],
   exports: [AppComponent],
   bootstrap: [AppComponent]
