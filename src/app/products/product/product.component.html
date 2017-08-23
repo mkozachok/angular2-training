@@ -1,0 +1,7 @@
+<ul *ngFor="let product of products | sort:{field: 'price', 'lowFirst': true}">
+  <li>
+    {{product.name}} - {{product.price | currency:'USD':fals}}
+    <input type="number" value="1" #quantity />
+    <button appChangeStyle (click)="addToCart(product, quantity.value)">Buy</button>
+  </li>
+</ul>

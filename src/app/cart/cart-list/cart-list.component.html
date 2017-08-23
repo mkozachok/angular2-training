@@ -1,0 +1,8 @@
+<ul *ngFor="let cartItem of cartList">
+  <li>
+    <app-cart-item [cart]="cartItem"></app-cart-item>
+    <input type="number" value={{cartItem.quantity}} #quantity />
+    <button (click)="onUpdate(cartItem, quantity.value)">Update</button>
+    <button (click)="onRemove(cartItem)">Remove</button>
+  </li>
+</ul>
